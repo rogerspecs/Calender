@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-image: url(../images/ocean.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+.container .events{
+    padding: 5rem;
+    background-color: transparent;
+}
+.container .month{
+    margin-right: 1rem;
+    padding: 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 80%;
+    border-radius: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    box-sizing: border-box;
+}
+.container .month .themonth{
+    grid-column: 1/8;
+    font-size: 60px;
+    color: white;
+    align-self: center;
+    background-color: transparent;
+    user-select: none;
+}
+.container .month span{
+    background-color: dodgerblue;
+    align-self: end;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    user-select: none;
+    font-size: 18px;
+}
+.container .month button{
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+}
+.container .month button:hover{
+    background:rgba(0, 0, 0, 0.8);
+}
+.container .month button.active{
+    border: 1px solid white;
+    background-color: tomato;
+}
